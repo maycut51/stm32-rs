@@ -28,6 +28,9 @@ VREFBUF:
   _strip:
     - "VREFBUF_"
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
  - common_patches/usart/merge_BRR_fields.yaml
  - ./common_patches/usart/merge_CR1_DEATx_fields.yaml

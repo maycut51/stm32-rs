@@ -59,6 +59,9 @@ PWR:
       MAIN_MODE: [0, "Voltage regulator in Main mode during Deepsleep mode (Stop mode)"]
       LOW_POWER_MODE: [1, "Voltage regulator switches to low-power mode when the CPU enters Deepsleep mode (Stop mode)"]
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
  - ./common_patches/firewall/l0.yaml
  - ./common_patches/pwr/l0_mode.yaml

@@ -159,6 +159,16 @@ _add:
     derivedFrom: USART1
     baseAddress: "0x40004800"
 
+IWDG:
+  _modify:
+    "KR,PR,RLR,SR,WINR":
+      size: 16
+
+WWDG:
+  _modify:
+    "CR,CFR,SR":
+      size: 16
+
 _include:
   - common_patches/g0_strip.yaml
   - common_patches/nvic/2_prio_bits.yaml

@@ -1,5 +1,11 @@
 _svd: ../svd/stm32h735.svd
 
+IWDG1:
+  _include: common_patches/16bit.yaml
+
+WWDG1:
+  _include: common_patches/16bit.yaml
+
 # Merge the hundreds of individual bit fields into single fields for the
 # crypt key/iv registers.
 CRYP:

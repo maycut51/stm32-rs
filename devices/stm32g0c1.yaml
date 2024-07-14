@@ -62,6 +62,9 @@ TIM3:
 USB:
   _strip: "USB_"
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
   - common_patches/g0x1_strip.yaml
   - common_patches/nvic/2_prio_bits.yaml

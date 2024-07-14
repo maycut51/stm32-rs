@@ -31,7 +31,11 @@ SPI?:
     - common_patches/16bit.yaml
     - common_patches/spi/dr8.yaml
 
+IWDG:
+  _include: common_patches/16bit.yaml
+
 WWDG:
+  _include: common_patches/16bit.yaml
   # EWIF is named incorrectly in the SVD compared to its name in RM0008
   SR:
     _modify:

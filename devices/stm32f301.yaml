@@ -136,6 +136,9 @@ MPU:
   _strip:
     - "MPU_"
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
  - common_patches/cec/cfgr.yaml
  - ../peripherals/hdmi_cec.yaml

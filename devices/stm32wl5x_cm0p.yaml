@@ -89,6 +89,10 @@ LPTIM[23]:
 IWDG:
   _delete:
     - WINR
+  _include: common_patches/16bit.yaml
+
+WWDG:
+  _include: common_patches/16bit.yaml
 
 # Rename this so it has the same name as all other STM32 USARTs
 LPUART,USART?:

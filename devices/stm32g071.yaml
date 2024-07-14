@@ -83,6 +83,16 @@ TIM15:
       OC2M2:
         name: OC2M_3
 
+IWDG:
+  _modify:
+    "KR,PR,RLR,SR,WINR":
+      size: 16
+
+WWDG:
+  _modify:
+    "CR,CFR,SR":
+      size: 16
+
 _include:
   - common_patches/g0x1_strip.yaml
   - common_patches/nvic/2_prio_bits.yaml

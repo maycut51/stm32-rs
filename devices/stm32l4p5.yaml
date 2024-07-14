@@ -69,6 +69,9 @@ SPI?:
     - common_patches/16bit.yaml
     - common_patches/spi/dr8.yaml
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
   - ../peripherals/gpio/gpio_with_brr.yaml
   - ../peripherals/gpio/v2/common.yaml

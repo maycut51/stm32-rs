@@ -3,7 +3,11 @@ _svd: ../svd/stm32f100.svd
 _derive:
   UART5: UART4
 
+IWDG:
+  _include: common_patches/16bit.yaml
+
 WWDG:
+  _include: common_patches/16bit.yaml
   # EWIF is named incorrectly in the SVD compared to its name in RM0008
   SR:
     _modify:

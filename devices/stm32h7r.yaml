@@ -5,6 +5,9 @@ _clear_fields: ["*"]
 SPI?:
   _include: common_patches/spi/rxtxdr.yaml
 
+"?WDG":
+  _include: common_patches/16bit_with_mask.yaml
+
 _include:
   - common_patches/h7_common_bootflash.yaml
   - collect/jpeg/ram_h7rs.yaml

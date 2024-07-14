@@ -30,6 +30,12 @@ QUADSPI:
 SPI?:
   _include: common_patches/spi/rxtxdr.yaml
 
+IWDG1:
+  _include: common_patches/16bit.yaml
+
+WWDG1:
+  _include: common_patches/16bit.yaml
+
 _include:
  - ../peripherals/hdmi_cec.yaml
  - common_patches/rcc/h7_hsicfgr_csicfgr_rev_v.yaml

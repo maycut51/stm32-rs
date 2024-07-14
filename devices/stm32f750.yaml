@@ -57,6 +57,9 @@ SPI?:
     - common_patches/16bit.yaml
     - common_patches/spi/dr8.yaml
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
  - ../peripherals/hdmi_cec.yaml
  - common_patches/usart/merge_CR1_DEATx_fields.yaml

@@ -149,7 +149,11 @@ EXTI:
         description: "EXTI Line 20 interrupt"
         value: 76
 
+IWDG:
+  _include: common_patches/16bit.yaml
+
 WWDG:
+  _include: common_patches/16bit.yaml
   _add:
     _interrupts:
       WWDG:

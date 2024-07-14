@@ -133,6 +133,9 @@ PWR:
         bitOffset: 10
         bitWidth: 1
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
  - common_patches/nvic/4_prio_bits.yaml
  - common_patches/i2c/merge_OAR1_ADDx_fields.yaml

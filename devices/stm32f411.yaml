@@ -113,7 +113,12 @@ USART1:
       USART6:
         description: "USART6 global interrupt"
         value: 71
+
+IWDG:
+  _include: common_patches/16bit.yaml
+
 WWDG:
+  _include: common_patches/16bit.yaml
   _add:
     _interrupts:
       WWDG:

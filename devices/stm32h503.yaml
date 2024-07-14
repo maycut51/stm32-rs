@@ -3,6 +3,9 @@ _svd: ../svd/stm32h503.svd
 SPI?:
   _include: common_patches/spi/rxtxdr.yaml
 
+"?WDG":
+  _include: common_patches/16bit_with_mask.yaml
+
 _include:
   - common_patches/h5.yaml
   - ../peripherals/crs/crs.yaml

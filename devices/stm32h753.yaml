@@ -42,6 +42,9 @@ QUADSPI:
 SPI?:
   _include: common_patches/spi/rxtxdr.yaml
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
  - ../peripherals/hdmi_cec.yaml
  - common_patches/h7_common_singlecore.yaml

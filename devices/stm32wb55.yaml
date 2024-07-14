@@ -315,6 +315,9 @@ SPI?:
 SYSCFG:
   _include: ../peripherals/syscfg/syscfg_wb55.yaml
 
+"?WDG":
+  _include: common_patches/16bit.yaml
+
 _include:
  - collect/dma/dmamux.yaml
  - common_patches/rtc/alarm.yaml

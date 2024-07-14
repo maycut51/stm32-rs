@@ -235,9 +235,14 @@ RCC:
           bitOffset: 1
           bitWidth: 1
 
-# Add missing interrupts defined in RM0402
+
+IWDG:
+  _include: common_patches/16bit.yaml
+
 WWDG:
+  _include: common_patches/16bit.yaml
   _add:
+    # Add missing interrupts defined in RM0402
     _interrupts:
       WWDG:
         description: Window Watchdog interrupt
