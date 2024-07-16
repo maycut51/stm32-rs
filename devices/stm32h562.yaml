@@ -22,7 +22,7 @@ _include:
   - ../peripherals/gpio/gpio_with_brr.yaml
   - ../peripherals/gpio/gpio_with_hslvr.yaml
 
-  - ../peripherals/rcc/rcc_h5.yaml
+  - ../peripherals/rcc/rcc_h562.yaml
 
   - common_patches/rtc/alarm.yaml
   - common_patches/rtc/rtc_cr.yaml

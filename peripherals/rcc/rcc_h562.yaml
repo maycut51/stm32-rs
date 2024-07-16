@@ -6,17 +6,22 @@ RCC:
     TIMICSEL:
       Disabled: [0, "No internal clock available for timers input capture"]
       Enabled: [1, "hsi_ker_ck/1024, hsi_ker_ck/8 and csi_ker_ck/128 selected for timers input capture"]
-    USART*SEL:
+    USART*SEL,UART*SEL:
       _name: UartSel
       PCLK: [0, "PCLKx selected as clock source (rcc_pclk_x)"]
       PLL2_Q: [1, "PLL2 Q clock selected as clock source (pll2_q_ck)"]
+      PLL3_Q: [2, "PLL3 Q clock selected as clock source (pll3_q_ck)"]
       HSI_KER: [3, "HSI kernel clock selected as clock source (hsi_ker_ck)"]
       CSI_KER: [4, "CSI kernel clock selected as clock source (csi_ker_ck)"]
       LSE: [5, "LSE clock selected as clock source (lse_ck)"]
   CCIPR2:
+    _modify:
+      USART*SEL,UART*SEL:
+        derivedFrom: RCC.CCIPR1.USART1SEL
     LPTIM?SEL:
       PCLK: [0, "PCLKx selected as clock source (rcc_pclk_x)"]
       PLL2_P: [1, "PLL2 P clock selected as clock source (pll2_p_ck)"]
+      PLL3_P: [2, "PLL3 P clock selected as clock source (pll3_p_ck)"]
       LSE_KER: [3, "LSE kernel selected as clock source (lse_ck)"]
       LSI_KER: [4, "LSI kernel selected as clock source (lsi_ker_ck)"]
       PER_CK: [5, "per_ck clock selected as clock source"]
@@ -27,34 +32,54 @@ RCC:
     SPI[123]SEL:
       PLL1_Q: [0, "PLL1 Q clock selected as clock source (pll1_q_ck)"]
       PLL2_P: [1, "PLL2 P clock selected as clock source (pll2_p_ck)"]
+      PLL3_P: [2, "PLL3 P clock selected as clock source (pll3_p_ck)"]
       AUDIOCLK: [3, "AUDIOCLK clock selected as clock source"]
       PER_CK: [4, "per_ck clock selected as clock source"]
+    SPI[456]SEL:
+      PCLK: [0, "PCLKx selected as clock source (rcc_pclk_x)"]
+      PLL2_Q: [1, "PLL2 Q clock selected as clock source (pll2_q_ck)"]
+      PLL3_Q: [2, "PLL3 Q clock selected as clock source (pll3_q_ck)"]
+      HSI_KER: [3, "HSI kernel clock selected as clock source (hsi_ker_ck)"]
+      CSI_KER: [4, "CSI kernel clock selected as clock source (csi_ker_ck)"]
+      LSE: [5, "LSE clock selected as clock source (lse_ck)"]
   CCIPR4:
     I3C?SEL:
       _name: I3cSel
       PCLK: [0, "PCLKx selected as clock source (rcc_pclk_x)"]
-      PLL2_R: [1, "PLL2 R clock selected as clock source (pll2_r_ck)"]
+      PLL3_R: [1, "PLL3 R clock selected as clock source (pll3_r_ck)"]
       HSI_KER: [2, "HSI kernel clock selected as clock source (hsi_ker_ck)"]
     I2C?SEL:
       _name: I2cSel
       PCLK: [0, "PCLKx selected as clock source (rcc_pclk1_x)"]
-      PLL2_R: [1, "PLL2 R Clock selected as clock source (pll2_r_ck)"]
+      PLL3_R: [1, "PLL3 R Clock selected as clock source (pll3_r_ck)"]
       HSI_KER: [2, "HSI kernel clock selected as clock source (hsi_ker_ck)"]
       CSI_KER: [3, "CSI kernel clock selected as clock source (csi_ker_ck)"]
+    SDMMC?SEL:
+      PLL1_Q: [0, "PLL1 Q clock selected as clock source (pll1_q_ck)"]
+      PLL2_R: [1, "PLL2 R Clock selected as clock source (pll2_r_ck)"]
     USBSEL:
       DISABLE: [0, "Disable the clock"]
       PLL1_Q: [1, "PLL1 Q clock selected as clock source (pll1_q_ck)"]
-      PLL2_Q: [2, "PLL2 Q clock selected as clock source (pll2_q_ck)"]
+      PLL3_Q: [2, "PLL3 Q clock selected as clock source (pll3_q_ck)"]
       HSI48: [3, "HSI48 clock selected as clock source (hsi48_ker_ck)"]
     SYSTICKSEL:
       HCLK_DIV8: [0, "RCC HLCK divided by 8 selected as clock source (rcc_hclk / 8)"]
       LSI_KER: [1, "LSI kernel selected as clock source (lsi_ker_ck)"]
       LSE: [2, "LSE selected as clock source (lse_ck)"]
+    OCTOSPI1SEL:
+      HCLK4: [0, "rcc_hclk4 selected as kernel clock"]
+      PLL1_Q: [1, "PLL1 Q clock selected as clock source (pll1_q_ck)"]
+      PLL2_R: [2, "PLL2 R Clock selected as clock source (pll2_r_ck)"]
+      PER: [3, "per_ck selected as kernel clock"]
   CCIPR5:
-    DAC1SEL:
-      LSE: [0, "LSE selected as clock source (lse_ck)"]
-      LSI_KER: [1, "LSI kernel selected as clock source (lsi_ker_ck)"]
-  PRIVCFGR:
-    PRIV:
-      Any: [0, "RCC functions can be modified by privileged or unprivileged access"]
-      PrivilegedOnly: [1, "RCC functions can only be modified by privileged access"]
+    _modify:
+      SAI?SEL:
+        derivedFrom: RCC.CCIPR3.SPI1SEL
+    CECSEL:
+      LSE: [0, "LSE clock selected as clock source (lse_ck)"]
+      LSI: [1, "LSI kernel clock selected as clock source (lsi_ker_ck)"]
+      CSI_KER_DIV122: [2, "CSI kernel clock divided by 122 selected as clock source (csi_ker_ck / 122)"]
+  SECCFGR:
+    "*SEC":
+      NonSecure: [0, "non secure"]
+      Secure: [1, "secure"]
