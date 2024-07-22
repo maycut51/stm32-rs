@@ -87,11 +87,13 @@ IWDG:
   _modify:
     "KR,PR,RLR,SR,WINR":
       size: 16
+  _include: ../peripherals/iwdg/iwdg_with_WINR.yaml
 
 WWDG:
   _modify:
     "CR,CFR,SR":
       size: 16
+  _include: ../peripherals/wwdg/wwdg_v2.yaml
 
 _include:
   - common_patches/g0x1_strip.yaml
@@ -108,7 +110,6 @@ _include:
   - collect/gpio/v2.yaml
   - common_patches/i2c/g0.yaml
   - ../peripherals/i2c/i2c_v2.yaml
-  - ../peripherals/iwdg/iwdg_with_WINR.yaml
   - common_patches/rtc/alarm.yaml
   - collect/rtc/tamp_bkpr.yaml
   - collect/rtc/alarm.yaml
@@ -124,4 +125,3 @@ _include:
   - common_patches/usart/g0.yaml
   - ../peripherals/usart/usart_v2C.yaml
   - ../peripherals/usart/usart_wl.yaml
-  - ../peripherals/wwdg/wwdg_v2.yaml

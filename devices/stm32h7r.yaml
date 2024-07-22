@@ -5,7 +5,10 @@ _clear_fields: ["*"]
 SPI?:
   _include: common_patches/spi/rxtxdr.yaml
 
-"?WDG":
+IWDG:
+  _include: common_patches/16bit_with_mask.yaml
+
+WWDG:
   _include: common_patches/16bit_with_mask.yaml
 
 _include:

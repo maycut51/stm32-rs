@@ -240,7 +240,10 @@ SPI?:
     - common_patches/16bit.yaml
     - common_patches/spi/dr8.yaml
 
-"?WDG":
+IWDG:
+  _include: common_patches/16bit.yaml
+
+WWDG:
   _include: common_patches/16bit.yaml
 
 # Most of the other patches for this device are common with the L4x2 device.

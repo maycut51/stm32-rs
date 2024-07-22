@@ -60,8 +60,15 @@ TIM3:
 VREFBUF:
   _strip: "VREFBUF_"
 
-"?WDG":
-  _include: common_patches/16bit.yaml
+IWDG:
+  _include:
+    - common_patches/16bit.yaml
+    - ../peripherals/iwdg/iwdg_with_WINR.yaml
+
+WWDG:
+  _include:
+    - common_patches/16bit.yaml
+    - ../peripherals/wwdg/wwdg_v2.yaml
 
 _include:
   - common_patches/g0_strip.yaml
@@ -78,7 +85,6 @@ _include:
   - collect/gpio/v2.yaml
   - common_patches/i2c/g0.yaml
   - ../peripherals/i2c/i2c_v2.yaml
-  - ../peripherals/iwdg/iwdg_with_WINR.yaml
   - common_patches/rtc/alarm.yaml
   - collect/rtc/tamp_bkpr.yaml
   - collect/rtc/alarm.yaml
@@ -93,4 +99,3 @@ _include:
   - common_patches/usart/g0.yaml
   - ../peripherals/usart/usart_v2C.yaml
   - ../peripherals/usart/usart_wl.yaml
-  - ../peripherals/wwdg/wwdg_v2.yaml

@@ -28,8 +28,15 @@ QUADSPI:
     - common_patches/quadspi/dr_multi_access.yaml
     - ../peripherals/quadspi/quadspi_v1_dual_flash.yaml
 
-"?WDG":
-  _include: common_patches/16bit.yaml
+IWDG:
+  _include:
+    - common_patches/16bit.yaml
+    - ../peripherals/iwdg/iwdg_with_WINR.yaml
+
+WWDG:
+  _include:
+    - common_patches/16bit.yaml
+    - ../peripherals/wwdg/wwdg_v2.yaml
 
 _include:
  - common_patches/usart/merge_BRR_fields.yaml
@@ -49,8 +56,6 @@ _include:
  - ../peripherals/adc/adc_v3_g4.yaml
  - ../peripherals/adc/adc_v3_common_g4.yaml
  - collect/comp/csr.yaml
- - ../peripherals/iwdg/iwdg_with_WINR.yaml
- - ../peripherals/wwdg/wwdg_v2.yaml
  - ./common_patches/cordic/g4.yaml
  - ../peripherals/cordic/cordic_g4.yaml
  - common_patches/rtc/alarm.yaml

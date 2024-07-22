@@ -43,7 +43,10 @@ SPI?:
     - common_patches/16bit.yaml
     - common_patches/spi/dr8.yaml
 
-"?WDG":
+IWDG:
+  _include: common_patches/16bit.yaml
+
+WWDG:
   _include: common_patches/16bit.yaml
 
 _include:

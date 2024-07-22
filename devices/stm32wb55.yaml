@@ -315,7 +315,10 @@ SPI?:
 SYSCFG:
   _include: ../peripherals/syscfg/syscfg_wb55.yaml
 
-"?WDG":
+IWDG:
+  _include: common_patches/16bit.yaml
+
+WWDG:
   _include: common_patches/16bit.yaml
 
 _include:

@@ -21,8 +21,15 @@ SPI?:
     - common_patches/16bit.yaml
     - common_patches/spi/dr8.yaml
 
-"?WDG":
-  _include: common_patches/16bit.yaml
+IWDG:
+  _include:
+    - common_patches/16bit.yaml
+    - ../peripherals/iwdg/iwdg.yaml
+
+WWDG:
+  _include:
+    - common_patches/16bit.yaml
+    - ../peripherals/wwdg/wwdg.yaml
 
 _include:
  - ./common_patches/i2c/merge_OAR1_ADDx_fields.yaml
@@ -37,7 +44,6 @@ _include:
  - ../peripherals/dac/dac_dmaudr.yaml
  - ../peripherals/crc/crc_basic.yaml
  - ../peripherals/crc/crc_idr_8bit.yaml
- - ../peripherals/wwdg/wwdg.yaml
  - ../peripherals/pwr/pwr_v1.yaml
  - common_patches/gpio/with_OSPEEDER.yaml
  - ../peripherals/gpio/v2/common.yaml
@@ -50,7 +56,6 @@ _include:
  - ../peripherals/tim/tim2345_16bit.yaml
  - ../peripherals/tim/v1/ccm.yaml
  - collect/tim/ccr.yaml
- - ../peripherals/iwdg/iwdg.yaml
  - ../peripherals/exti/exti.yaml
  - ../peripherals/i2c/i2c_v1.yaml
  - common_patches/rtc/alarm.yaml
