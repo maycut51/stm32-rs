@@ -19,6 +19,7 @@ RCC:
       USART*SEL,UART*SEL:
         derivedFrom: RCC.CCIPR1.USART1SEL
     LPTIM?SEL:
+      _name: LpTimSel
       PCLK: [0, "PCLKx selected as clock source (rcc_pclk_x)"]
       PLL2_P: [1, "PLL2 P clock selected as clock source (pll2_p_ck)"]
       PLL3_P: [2, "PLL3 P clock selected as clock source (pll3_p_ck)"]
@@ -30,6 +31,7 @@ RCC:
       LPUART1SEL:
         derivedFrom: RCC.CCIPR1.USART1SEL
     SPI[123]SEL:
+      _name: SpiSel
       PLL1_Q: [0, "PLL1 Q clock selected as clock source (pll1_q_ck)"]
       PLL2_P: [1, "PLL2 P clock selected as clock source (pll2_p_ck)"]
       PLL3_P: [2, "PLL3 P clock selected as clock source (pll3_p_ck)"]

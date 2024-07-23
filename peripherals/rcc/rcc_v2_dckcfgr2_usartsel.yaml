@@ -1,6 +1,7 @@
 RCC:
   DCKCFGR2:
     USART*SEL:
+      _name: UartSel
       APB: [0, "APBx clock (PCLKx) is selected as USART clock"]
       SYSCLK: [1, "System clock is selected as USART clock"]
       HSI: [2, "HSI clock is selected as USART clock"]

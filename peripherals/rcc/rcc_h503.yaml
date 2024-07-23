@@ -15,6 +15,7 @@ RCC:
       LSE: [5, "LSE clock selected as clock source (lse_ck)"]
   CCIPR2:
     LPTIM?SEL:
+      _name: LpTimSel
       PCLK: [0, "PCLKx selected as clock source (rcc_pclk_x)"]
       PLL2_P: [1, "PLL2 P clock selected as clock source (pll2_p_ck)"]
       LSE_KER: [3, "LSE kernel selected as clock source (lse_ck)"]
@@ -25,6 +26,7 @@ RCC:
       LPUART1SEL:
         derivedFrom: RCC.CCIPR1.USART1SEL
     SPI[123]SEL:
+      _name: SpiSel
       PLL1_Q: [0, "PLL1 Q clock selected as clock source (pll1_q_ck)"]
       PLL2_P: [1, "PLL2 P clock selected as clock source (pll2_p_ck)"]
       AUDIOCLK: [3, "AUDIOCLK clock selected as clock source"]

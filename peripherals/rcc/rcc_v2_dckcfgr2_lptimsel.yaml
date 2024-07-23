@@ -1,6 +1,7 @@
 RCC:
   DCKCFGR2:
     LPTIM1SEL:
+      _name: LpTimSel
       APB: [0, "APBx clock (PCLKx) selected as LPTILM1 clock"]
       LSI: [1, "LSI clock is selected as LPTILM1 clock"]
       HSI: [2, "HSI clock is selected as LPTILM1 clock"]
