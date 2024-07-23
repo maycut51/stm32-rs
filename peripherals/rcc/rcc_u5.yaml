@@ -489,13 +489,6 @@ RCC:
       Disabled: [0, "Peripheral autonomous mode disabled during Stop 0/1/2 mode"]
       Enabled: [1, "Peripheral autonomous mode enabled during Stop 0/1/2 mode"]
   CCIPR1:
-    _modify:
-      I2C[24]SEL:
-        derivedFrom: I2C1SEL
-      SPI1SEL:
-        derivedFrom: SPI2SEL
-      UART[45]SEL,USART[23]SEL:
-        derivedFrom: USART1SEL
     TIMICSEL:
       Disabled: [-1, "HSI, MSIK and MSIS dividers disabled"]
       HsiMsisMsis: [4, "HSI/256, MSIS/1024 and MSIS/4 generated and can be selected by TIM16, TIM17, and LPTIM2 as internal input capture"]
@@ -520,19 +513,19 @@ RCC:
       LSI: [1, "LSI selected"]
       HSI16: [2, "HSI16 selected"]
       MSIK: [3, "MSIK selected"]
-    SPI2SEL:
+    SPI?SEL:
       _name: SpiSel
       PCLK: [0, "PCLKx selected"]
       SYSCLK: [1, "SYSCLK selected"]
       HSI16: [2, "HSI16 selected"]
       MSIK: [3, "MSIK selected"]
-    I2C1SEL:
+    I2C?SEL:
       _name: I2cSel
       PCLK: [0, "PCLKx selected"]
       SYSCLK: [1, "SYSCLK selected"]
       HSI16: [2, "HSI16 selected"]
       MSIK: [3, "MSIK selected"]
-    USART1SEL:
+    "USART?SEL,UART?SEL":
       _name: UartSel
       PCLK: [0, "PCLKx selected"]
       SYSCLK: [1, "SYSCLK selected"]
